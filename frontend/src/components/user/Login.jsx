@@ -20,7 +20,7 @@ const Login = ({history, location}) => {
   const redirect = location.search ? location.search.split('=')[1] : '/'
   useEffect(() => {
     if (isAuthenticated) {
-      history.push(redirect);
+      history.push('/dashboard');
     }
     if (error) {
       alert.error(error);
@@ -40,7 +40,6 @@ const Login = ({history, location}) => {
       ) : (
         <Fragment>
           <MetaData title={"login"} />
-
           <div className="row wrapper">
             <div className="col-10 col-lg-5">
               <form className="shadow-lg" onSubmit={submitHandler}>

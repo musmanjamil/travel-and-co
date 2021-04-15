@@ -11,7 +11,7 @@ const sendEmail = require('../utils/sendEmails');
 /// Register a user  =>   /api/v1/register
 exports.registerUser = catchAsyncError(async (req, res, next) => {
 
-   console.log(req.body.avatar)
+//    console.log(req.body.avatar)
 
     const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
         folder: 'avatars',
@@ -90,7 +90,7 @@ exports.updatePassword = catchAsyncError(async (req, res, next) => {
 });
 
 
-// Update current user data   =>   /api/v1/me/update
+// Update profile user data   =>   /api/v1/me/update
 exports.updateProfile = catchAsyncError(async (req, res, next) => {
 
     let newUserData = {

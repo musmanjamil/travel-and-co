@@ -21,8 +21,8 @@ const Home = () => {
 
           <div id="group_2">
             <div id="rectangle_2"></div>
-            <Link to="/register">
-              <div id="sign_up">sign up</div>
+            <Link to="/dashboard">
+              <div id="sign_up">View</div>
             </Link>
           </div>
 

@@ -1,0 +1,248 @@
+[
+    {
+    "name": "Pakistan Passu Cones",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tempus lorem vel sagittis. Nulla semper eu justo vel imperdiet. Morbi tempus turpis non elit auctor gravida. Etiam non erat rutrum, euismod sem eget, tincidunt sapien. Sed consectetur semper laoreet. Fusce mollis rhoncus ipsum, a pretium urna tempor non. Donec at ipsum laoreet, pellentesque ex a, faucibus diam.",
+    "images": [{
+        
+            "public_id": "tours/Beautiful-places-in-Pakistan-Passu-Cones-SiddiquiGetty-CanvaPro_jojdy7",
+            "url":"https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390846/tours/Beautiful-places-in-Pakistan-Passu-Cones-SiddiquiGetty-CanvaPro_jojdy7.jpg"
+    }],
+     "silver":{
+       "breakfast":false,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"economy class",
+        "transport":false,
+        "cost":6000
+    },
+    "gold":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":8000
+    },
+    "platinum":{
+       "breakfast":true,
+        "lunch": true,
+        "dinner":true,
+        "roomType":"first class",
+        "transport": true,
+        "cost":10000
+    }
+
+},
+{
+    "name": "Hunza-Valley",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tempus lorem vel sagittis. Nulla semper eu justo vel imperdiet. Morbi tempus turpis non elit auctor gravida. Etiam non erat rutrum, euismod sem eget, tincidunt sapien. Sed consectetur semper laoreet. Fusce mollis rhoncus ipsum, a pretium urna tempor non. Donec at ipsum laoreet, pellentesque ex a, faucibus diam.",
+    "images": [{
+        
+            "public_id": "tours/Beautiful-places-in-Pakistan-Hunza-Valley-undefinedGetty-CanvaPro_jn638g",
+            "url":"https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390843/tours/Beautiful-places-in-Pakistan-Hunza-Valley-undefinedGetty-CanvaPro_jn638g.jpg"
+    }],
+     "silver":{
+       "breakfast":false,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"economy class",
+        "transport":false,
+        "cost":5000
+    },
+    "gold":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":7000
+    },
+    "platinum":{
+       "breakfast":true,
+        "lunch": true,
+        "dinner":true,
+        "roomType":"first class",
+        "transport": true,
+        "cost":9000
+    }
+
+},
+{
+    "name": "Bamboret Valley Pakistan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tempus lorem vel sagittis. Nulla semper eu justo vel imperdiet. Morbi tempus turpis non elit auctor gravida. Etiam non erat rutrum, euismod sem eget, tincidunt sapien. Sed consectetur semper laoreet. Fusce mollis rhoncus ipsum, a pretium urna tempor non. Donec at ipsum laoreet, pellentesque ex a, faucibus diam.",
+    "images": [{
+        
+            "public_id": "tours/BamboretValleyPakistanPawopa3336CanvaPro_j5mk7q",
+            "url":"https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390842/tours/BamboretValleyPakistanPawopa3336CanvaPro_j5mk7q.jpg"
+    }],
+     "silver":{
+       "breakfast":false,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"economy class",
+        "transport":false,
+        "cost":4000
+    },
+    "gold":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":5000
+    },
+    "platinum":{
+       "breakfast":true,
+        "lunch": true,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":6000
+    }
+
+},
+{
+    "name": "Phander Lake Pakistan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tempus lorem vel sagittis. Nulla semper eu justo vel imperdiet. Morbi tempus turpis non elit auctor gravida. Etiam non erat rutrum, euismod sem eget, tincidunt sapien. Sed consectetur semper laoreet. Fusce mollis rhoncus ipsum, a pretium urna tempor non. Donec at ipsum laoreet, pellentesque ex a, faucibus diam.",
+    "images": [{
+        
+            "public_id": "tours/PhanderLakePakistanKanokwanPonokCanvaPro_pf5adz",
+            "url":"https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390846/tours/PhanderLakePakistanKanokwanPonokCanvaPro_pf5adz.jpg"
+    }],
+     "silver":{
+       "breakfast":false,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"economy class",
+        "transport":false,
+        "cost":4000
+    },
+    "gold":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":5000
+    },
+    "platinum":{
+       "breakfast":true,
+        "lunch": true,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":6000
+    }
+
+},
+{
+    "name": "Swat Valley Pakistan",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tempus lorem vel sagittis. Nulla semper eu justo vel imperdiet. Morbi tempus turpis non elit auctor gravida. Etiam non erat rutrum, euismod sem eget, tincidunt sapien. Sed consectetur semper laoreet. Fusce mollis rhoncus ipsum, a pretium urna tempor non. Donec at ipsum laoreet, pellentesque ex a, faucibus diam.",
+    "images": [{
+        
+            "public_id": "tours/SwatValleyPakistanSAKhanPhotographyCanvaPro_yqeqy6",
+            "url":"https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390845/tours/SwatValleyPakistanSAKhanPhotographyCanvaPro_yqeqy6.jpg"
+    }],
+     "silver":{
+       "breakfast":false,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"economy class",
+        "transport":false,
+        "cost":4000
+    },
+    "gold":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":5000
+    },
+    "platinum":{
+       "breakfast":true,
+        "lunch": true,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":6000
+    }
+
+},
+{
+    "name": "Shimshal Valley",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tempus lorem vel sagittis. Nulla semper eu justo vel imperdiet. Morbi tempus turpis non elit auctor gravida. Etiam non erat rutrum, euismod sem eget, tincidunt sapien. Sed consectetur semper laoreet. Fusce mollis rhoncus ipsum, a pretium urna tempor non. Donec at ipsum laoreet, pellentesque ex a, faucibus diam.",
+    "images": [
+        {
+            "public_id" : "tours/PassuConesPakistanSuthidaloedchaiyapanCanvaPro_okswqv",
+            "url" : "https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390842/tours/PassuConesPakistanSuthidaloedchaiyapanCanvaPro_okswqv.jpg"
+        },
+        {
+            "public_id" : "tours/Beautiful-places-in-Pakistan-Shimshal-Valley-MortenHubbeGetty-CanvaPro_r5bd5a",
+            "url" : "https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390845/tours/Beautiful-places-in-Pakistan-Shimshal-Valley-MortenHubbeGetty-CanvaPro_r5bd5a.jpg" 
+        },
+        {
+            "public_id" : "tours/Beautiful-places-in-Pakistan-Deosai-ShahsoftGetty-CanvaPro_l8vklj",
+            "url" : "https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390843/tours/Beautiful-places-in-Pakistan-Deosai-ShahsoftGetty-CanvaPro_l8vklj.jpg"
+        }
+    ],
+     "silver":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"economy class",
+        "transport":false,
+        "cost":10000
+    },
+    "gold":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":12000
+    },
+    "platinum":{
+       "breakfast":true,
+        "lunch": true,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":15000
+    }
+
+},{
+    "name": "Yarkhun Valley",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tempus lorem vel sagittis. Nulla semper eu justo vel imperdiet. Morbi tempus turpis non elit auctor gravida. Etiam non erat rutrum, euismod sem eget, tincidunt sapien. Sed consectetur semper laoreet. Fusce mollis rhoncus ipsum, a pretium urna tempor non. Donec at ipsum laoreet, pellentesque ex a, faucibus diam.",
+    "images": [{
+        
+            "public_id": "tours/YarkhunValleySamanthaIntentionalDetours_rikhth",
+            "url":"https://res.cloudinary.com/ds6nxfg7r/image/upload/v1618390845/tours/YarkhunValleySamanthaIntentionalDetours_rikhth.jpg"
+    }],
+     "silver":{
+       "breakfast":false,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"economy class",
+        "transport":false,
+        "cost":4000
+    },
+    "gold":{
+       "breakfast":true,
+        "lunch": false,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":5000
+    },
+    "platinum":{
+       "breakfast":true,
+        "lunch": true,
+        "dinner":true,
+        "roomType":"business class",
+        "transport": true,
+        "cost":6000
+    }
+
+}
+]

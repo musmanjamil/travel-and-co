@@ -1,5 +1,5 @@
 //import * as constants from '../constants/constants';
-export const authReducer = (state = { user: { error: null } }, action) => {
+export const authReducer = (state = { user: null }, action) => {
     switch (action.type) {
         case 'LOGIN_REQUEST':
         case 'REGISTRATION_REQUEST':
@@ -7,8 +7,6 @@ export const authReducer = (state = { user: { error: null } }, action) => {
             return {
                 loading: true,
                 isAuthenticated: false,
-                user: null,
-                error: null
             }
         case 'LOGIN_SUCCESS':
         case 'REGISTRATION_SUCCESS':
