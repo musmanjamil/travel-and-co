@@ -89,3 +89,41 @@ export const tourDetailsReducer = (state = { tour: {} }, action) => {
     }
 }
 
+export const newTourReducer = (state = { tour: {} }, action) => {
+    switch (action.type) {
+
+        case 'NEW_TOUR_REQUEST':
+            return {
+                ...state,
+                loading: true
+            }
+
+        case 'NEW_TOUR_SUCCESS':
+            return {
+                loading: false,
+                success: action.payload.success,
+                product: action.payload.product
+            }
+
+        case 'NEW_TOUR_FAIL':
+            return {
+                ...state,
+                error: action.payload
+            }
+
+        case 'NEW_TOUR_RESET':
+            return {
+                ...state,
+                success: false
+            }
+
+        case 'CLEAR_ERRORS':
+            return {
+                ...state,
+                error: null
+            }
+
+        default:
+            return state
+    }
+}

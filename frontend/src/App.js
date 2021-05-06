@@ -1,4 +1,4 @@
-//import { useEffect } from 'react'
+import { useEffect } from 'react'
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -17,9 +17,18 @@ import SearchByBudget from "./components/layout/SearchByBudget";
 import SearchedByBudget from "./components/tours/SearchedByBudget";
 import tourDetails from "./components/tours/TourDetails"
 
+//import admin routes from 
+import NewTour from './components/admin/NewTour'
 import ProtectedRoute from "./components/route/ProtectedRoutes";
 
+import {loadUser} from "./actions/userActions"
+import store from "./store"
+
 function App() {
+  useEffect(() => {
+    store.dispatch(loadUser())
+  },[])
+
   return (
     <Router>
       <div className="app">
@@ -42,6 +51,9 @@ function App() {
           />
           <Route path="/password/forgot" component={ForgotPassword} exact />
           <Route path="/password/reset/:token" component={NewPassword} exact />
+          <ProtectedRoute path="/admin/tour" isAdmin={true} component={NewTour} exact />
+
+          <Footer />
         </div>
       </div>
     </Router>

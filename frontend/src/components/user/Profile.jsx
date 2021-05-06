@@ -20,7 +20,7 @@ const Profile = () => {
                             <figure className='avatar avatar-profile'>
                                 <img className="rounded-circle img-fluid" src={user.avatar.url} alt={user && user.name} />
                             </figure>
-                            <Link to="/me/update" id="edit_profile" className="btn btn-primary btn-block my-5">
+                            <Link to="/me/update" id="edit_profile" className="btn btn-p btn-block my-5">
                                 Edit Profile
                             </Link>
                         </div>
@@ -41,7 +41,7 @@ const Profile = () => {
                                 </Link>
                             )}
 
-                            <Link to="/password/update" className="btn btn-primary btn-block mt-3">
+                            <Link to="/password/update" className="btn btn-p btn-block mt-3">
                                 Change Password
                             </Link>
                         </div>

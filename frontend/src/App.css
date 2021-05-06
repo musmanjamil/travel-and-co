@@ -139,6 +139,10 @@ form:before {
   background-color: #e61e4d;
   color: white;
 }
+#search_btn {
+  background-color: #e61e4d;
+  color: white;
+}
 .page-item.active .page-link{
   background-color: #e61e4d;
     border-color:#e61e4d
@@ -239,6 +243,18 @@ form:before {
 .rating-inner::before {
   content: '\f005 \f005 \f005 \f005 \f005';
   color: #e61e4d;
+}
+.btn-p{
+  background: #e61e4d;
+  color:#e3e3e3;
+}
+.btn-p:hover{
+  color:#cbcbcb;
+  background:#c50606
+}
+.avatar-profile {
+  height: 16rem;
+  width: 16rem;
 }
 /* Property Details Page */
 .property-details-image {

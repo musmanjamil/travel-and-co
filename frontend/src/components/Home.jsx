@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MetaData from "./layout/MetaData";
+
 const Home = () => {
   return (
     <>
+    <MetaData title={"Welcome"} />
 	<div className="ab-divs">
       <div id="content-container">
         <div id="page_sprk_default_preset_name_custom___1_ek1">

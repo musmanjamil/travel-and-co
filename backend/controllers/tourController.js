@@ -44,6 +44,7 @@ exports.getTours = catchAsyncErrors(async (req, res, next) => {
 
     const apiFeatures = new APIFeatures(Tour.find(), req.query)
         .search()
+        .pagination(resPerPage)
 
     let tours = await apiFeatures.query;
     let filteredToursCount = tours.length;

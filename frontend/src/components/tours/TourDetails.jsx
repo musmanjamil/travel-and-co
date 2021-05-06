@@ -39,11 +39,13 @@ const Product = ({ match }) => {
             ))}
         </Carousel>
         <div className="row my-5">
+            <h3>Description</h3>
+            <p>{tour.description}</p>
+          </div>
+        {/* <div className="row my-5">
           <div className="col-8">
             <h3>Description</h3>
-            <p>
-              {tour.description}
-            </p>
+            <p>{tour.description}</p>
 
             <div className="features mt-5">
               <h3 className="mb-4">Features:</h3>
@@ -63,7 +65,10 @@ const Product = ({ match }) => {
               </div>
 
               <div className="room-feature">
-                <i className="fa fa-cog fa-fw fa-cutlery" aria-hidden="true"></i>
+                <i
+                  className="fa fa-cog fa-fw fa-cutlery"
+                  aria-hidden="true"
+                ></i>
                 <p>Kitchen</p>
               </div>
             </div>
@@ -112,8 +117,83 @@ const Product = ({ match }) => {
               </button>
             </div>
           </div>
+        </div> */}
+      </div>
+      <Fragment>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+          <h1 class="display-4">Pakages</h1>
+          <p class="lead">
+          Pellentesque sodales, leo sit amet condimentum vulputate, risus nibh mollis risus, in placerat mi ipsum id lacus. Sed dictum rutrum porta. Etiam ut ante ex. Nam in mauris vitae purus faucibus tincidunt.
+          </p>
         </div>
+        <div class="container">
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Silver</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                 {tour.silver && tour.silver.cost} <small className="text-muted">Rs/-</small>
+                </h1>
+                <ul className="list-unstyled mt-3 mb-4">
+                  <li>1 person included</li>
+                  <li> Breakfast {tour.silver && tour.silver.breakfast && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.breakfast && <i className="fas fa-times"></i>}</li>
+                  <li> Lunch {tour.silver && tour.silver.lunch && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.lunch && <i className="fas fa-times"></i>}</li>
+                  <li> Dinner {tour.silver && tour.silver.dinner && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.dinner && <i className="fas fa-times"></i>}</li>
+                  <li> Transport {tour.silver && tour.silver.transport && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.transport && <i className="fas fa-times"></i>}</li>
+                </ul>
+                <button
+                  type="button"
+                  className="btn btn-lg btn-block btn-p"
+                >
+                  Book now
+                </button>
+              </div>
+            </div>
+            <div className="card mb-4 box-shadow">
+              <div className="card-header">
+                <h4 className="my-0 font-weight-normal">Gold</h4>
+              </div>
+              <div className="card-body">
+                <h1 className="card-title pricing-card-title">
+                {tour.gold && tour.gold.cost} <small className="text-muted">Rs/- </small>
+                </h1>
+                <ul className="list-unstyled mt-3 mb-4">
+                <li>1 person included</li>
+                  <li> Breakfast {tour.gold && tour.gold.breakfast && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.breakfast && <i className="fas fa-times"></i>}</li>
+                  <li> Lunch {tour.gold && tour.gold.lunch && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.lunch && <i className="fas fa-times"></i>}</li>
+                  <li> Dinner {tour.gold && tour.gold.dinner && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.dinner && <i className="fas fa-times"></i>}</li>
+                  <li> Transport {tour.gold && tour.gold.transport && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.transport && <i className="fas fa-times"></i>}</li>
+                </ul>
+                <button type="button" className="btn btn-lg btn-block btn-p">
+                  Book now
+                </button>
+              </div>
+            </div>
+            <div className="card mb-4 box-shadow">
+              <div className="card-header">
+                <h4 className="my-0 font-weight-normal">platinum</h4>
+              </div>
+              <div className="card-body">
+                <h1 className="card-title pricing-card-title">
+                {tour.platinum && tour.platinum.cost}  <small className="text-muted">Rs/-</small>
+                </h1>
+                <ul className="list-unstyled mt-3 mb-4">
+                <li>1 person included</li>
+                <li> Breakfast {tour.platinum && tour.platinum.breakfast && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.breakfast && <i className="fas fa-times"></i>}</li>
+                  <li> Lunch {tour.platinum && tour.platinum.lunch && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.lunch && <i className="fas fa-times"></i>}</li>
+                  <li> Dinner {tour.platinum && tour.platinum.dinner && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.dinner && <i className="fas fa-times"></i>}</li>
+                  <li> Transport {tour.platinum && tour.platinum.transport && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.transport && <i className="fas fa-times"></i>}</li>
+                </ul>
+                <button type="button" className="btn btn-lg btn-block btn-p">
+                  Book now
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </Fragment>
     </Fragment>
   );
 };

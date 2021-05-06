@@ -20,6 +20,31 @@ export const getTours = (keyword = '', currentPage = 1) => async (dispatch) => {
         })
     }
 }
+export const newTour = (tourData) => async (dispatch) => {
+    try {
+
+        dispatch({ type: 'NEW_TOUR_REQUEST' })
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        const { data } = await axios.post(`/api/v1/admin/tour/new`, tourData, config)
+
+        dispatch({
+            type: 'NEW_TOUR_SUCCESS',
+            payload: data
+        })
+
+    } catch (error) {
+        dispatch({
+            type: 'NEW_TOUR_FAIL',
+            payload: error.response.data.message
+        })
+    }
+}
 export const getToursByBudget = (budget) => async (dispatch) => {
     try {
 
