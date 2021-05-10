@@ -27,19 +27,25 @@ const tourSchema = new mongoose.Schema({
         breakfast:Boolean,
         lunch: Boolean,
         dinner:Boolean,
-        roomType:{
+       roomType:{
             type: String,
             enum:{
                 values:[
-                    'economy class',
-                    'business class',
-                    'first class',
+                    '2 Star',
+                    '3 Star',
+                    '4 Star',
+                    '5 Star'
                 ]
             }
         },
         transport:{
-            type: Boolean,
-            required: true
+            type: String,
+            enum:{
+                values:[
+                    'Economy',
+                    'Luxury'
+                ]
+            }
         },
         cost:{
             type: Number,
@@ -54,15 +60,21 @@ const tourSchema = new mongoose.Schema({
             type: String,
             enum:{
                 values:[
-                    'economy class',
-                    'business class',
-                    'first class',
+                    '2 Star',
+                    '3 Star',
+                    '4 Star',
+                    '5 Star'
                 ]
             }
         },
         transport:{
-            type: Boolean,
-            required: true
+            type: String,
+            enum:{
+                values:[
+                    'Economy',
+                    'Luxury'
+                ]
+            }
         },
         cost:{
             type: Number,
@@ -77,15 +89,21 @@ const tourSchema = new mongoose.Schema({
             type: String,
             enum:{
                 values:[
-                    'economy class',
-                    'business class',
-                    'first class',
+                    '2 Star',
+                    '3 Star',
+                    '4 Star',
+                    '5 Star'
                 ]
             }
         },
         transport:{
-            type: Boolean,
-            required: true
+            type: String,
+            enum:{
+                values:[
+                    'Economy',
+                    'Luxury'
+                ]
+            }
         },
         cost:{
             type: Number,

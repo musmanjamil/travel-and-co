@@ -9,13 +9,7 @@ const APIFeatures = require('../utils/apiFeatures');
 // Create a new tour   =>  /api/v1/tour/new
 exports.newTour = catchAsyncErrors(async (req, res, next) => {
 
-    let images = []
-    if (typeof req.body.images === 'string') {
-        images.push(req.body.images);
-    } else {
-        images = req.body.images
-    }
-
+    const images = req.body.images
     let imagesLinks = [];
 
     for (let i = 0; i < images.length; i++) {
@@ -89,6 +83,7 @@ async function getSelectedTours(tours, budget) {
 
             let tourBody = {
                 tourId: tour._id,
+                type: 'Silver',
                 name: tour.name,
                 description: tour.description,
                 images: tour.images,
@@ -102,6 +97,7 @@ async function getSelectedTours(tours, budget) {
 
             let tourBody = {
                 tourId: tour._id,
+                type: 'Gold',
                 name: tour.name,
                 description: tour.description,
                 images: tour.images,
@@ -115,6 +111,7 @@ async function getSelectedTours(tours, budget) {
 
             let tourBody = {
                 tourId: tour._id,
+                type: 'Platinum',
                 name: tour.name,
                 description: tour.description,
                 images: tour.images,

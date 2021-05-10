@@ -28,19 +28,17 @@ const SearchedByBudget = ({ match }) => {
     }
     dispatch(getToursByBudget(budget));
   }, [dispatch, alert, error, budget]);
-  // function setCurrentPageNo(pageNumber) {
-  //   setCurrentPage(pageNumber);
-  // }
-  // let count = toursCount;
-  // if (budget) {
-  //   count = filteredToursCount;
-  // }
+
   return (
     <>
-    {/* {selectedTours && <div className="mt-5">Not any Place in your budget</div> } */}
-      {selectedTours && 
+    {loading ? (
+        <Loader />
+      ) : (
+      selectedTours && (
         <div className="row">
-          {selectedTours.map((tour) => (
+          {selectedTours.length === 0 ? <div className='alert alert-danger mt-5 w-100'><b>No Tours found with this budget ({budget}).</b></div> 
+                          :
+          selectedTours.map((tour) => (
             <div class="col-sm-12 col-md-6 col-lg-3 my-3">
               <div class="card p-2">
                 <img
@@ -50,37 +48,30 @@ const SearchedByBudget = ({ match }) => {
                 />
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">
-                    <Link to="#">{tour.name}</Link>
+                    <Link to={`/tour/${tour.tourId}`}>{tour.name}</Link>
                   </h5>
                   <h6 class="card-subtitle mb-2 text-muted">
-                   Breakfast {tour.details.breakfast && <i class="fas fa-check"></i>}{!tour.details.breakfast && <i class="fas fa-times"></i>} 
+                   {tour.description.substr(0,100)}...
                   </h6>
-                  <h6 class="card-subtitle mb-2 text-muted">
-                  Lunch {tour.details.lunch && <i class="fas fa-check"></i>}{!tour.details.lunch && <i class="fas fa-times"></i>}
-                  </h6>
-                  <h6 class="card-subtitle mb-2 text-muted">
-                  Dinner {tour.details.dinner && <i class="fas fa-check"></i>}{!tour.details.dinner && <i class="fas fa-times"></i>}
-                  </h6>
-                  <h6 class="card-subtitle mb-2 text-muted">
-                  Transport {tour.details.transport && <i class="fas fa-check"></i>}{!tour.details.transport && <i class="fas fa-times"></i>}
-                  </h6>
-                  <h6 class="card-subtitle mb-2 ">
-                    Room: {tour.details.roomType}
-                  </h6>
+
+                  <p class="card-text">
+                    <b>Package: {tour.type}</b>
+                  </p>
+
                   <p class="card-text">
                     <b>Rs: {tour.details.cost}</b> / Person
                   </p>
-                  <Link to="#" id="view_btn" className="btn btn-block">
-                    Book Now
+                  <Link to={`/tour/${tour.tourId}`} id="view_btn" className="btn btn-block">
+                    View Details
                   </Link>
                 </div>
               </div>
             </div>
-          ))}
+          ))
+        }
         </div>
-          }
-        
-        
+      )
+      )}
     </>
   );
 };

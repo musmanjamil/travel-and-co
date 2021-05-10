@@ -4,24 +4,48 @@ import { Carousel } from "react-bootstrap";
 import Loader from "../layout/Loader";
 import MetaData from "../layout/MetaData";
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
 import { getTourDetails, clearErrors } from "../../actions/tourActions";
+import {createBooking} from "../../actions/bookingActions"
 
 const Product = ({ match }) => {
+
+  const [startDate, setStartDate] = useState(new Date());
+
   const dispatch = useDispatch();
   const alert = useAlert();
 
   const { loading, error, tour } = useSelector((state) => state.tourDetails);
+  const { success } = useSelector((state) => state.booking);
+  const { user } = useSelector((state) => state.auth);
+
   useEffect(() => {
-    console.log(match.params.id);
     dispatch(getTourDetails(match.params.id));
 
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
     }
-  }, [dispatch, alert, error, match.params.id]);
+
+    if(success) {
+      alert.success('Tour Booked Successfully.');
+      dispatch({ type: 'CREATE_BOOKING_RESET' })
+    }
+
+
+  }, [dispatch, alert, error, match.params.id, success]);
+
+  const bookRoom = (price , tourPackage) =>{
+
+    const bookingData = { tour: tour._id, price, tourPackage, date: startDate }
+
+    dispatch(createBooking(bookingData))
+
+  }
   return (
     <Fragment>
       <div className="container container-fluid">
@@ -42,82 +66,6 @@ const Product = ({ match }) => {
             <h3>Description</h3>
             <p>{tour.description}</p>
           </div>
-        {/* <div className="row my-5">
-          <div className="col-8">
-            <h3>Description</h3>
-            <p>{tour.description}</p>
-
-            <div className="features mt-5">
-              <h3 className="mb-4">Features:</h3>
-              <div className="room-feature">
-                <i className="fa fa-cog fa-fw fa-users" aria-hidden="true"></i>
-                <p>6 Guests</p>
-              </div>
-
-              <div className="room-feature">
-                <i className="fa fa-cog fa-fw fa-bed" aria-hidden="true"></i>
-                <p>2 Beds</p>
-              </div>
-
-              <div className="room-feature">
-                <i className="fa fa-cog fa-fw fa-bath" aria-hidden="true"></i>
-                <p>2 Baths</p>
-              </div>
-
-              <div className="room-feature">
-                <i
-                  className="fa fa-cog fa-fw fa-cutlery"
-                  aria-hidden="true"
-                ></i>
-                <p>Kitchen</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-4">
-            <div className="booking-card shadow-lg p-4">
-              <p className="price-per-night">
-                <b>$28</b> / night
-              </p>
-
-              <div className="form-group">
-                <label for="check_in_field">Check In</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="check_in_field"
-                  placeholder="MM-DD-YYYY"
-                />
-              </div>
-
-              <div className="form-group">
-                <label for="check_out_field">Check Out</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="check_out_field"
-                  placeholder="MM-DD-YYYY"
-                />
-              </div>
-
-              <div className="form-group">
-                <label for="guest_field">No. of Guests</label>
-                <select className="form-control" id="guest_field">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                </select>
-              </div>
-
-              <button className="btn btn-block py-3 booking-btn">
-                Check availability
-              </button>
-            </div>
-          </div>
-        </div> */}
       </div>
       <Fragment>
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -141,13 +89,24 @@ const Product = ({ match }) => {
                   <li> Breakfast {tour.silver && tour.silver.breakfast && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.breakfast && <i className="fas fa-times"></i>}</li>
                   <li> Lunch {tour.silver && tour.silver.lunch && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.lunch && <i className="fas fa-times"></i>}</li>
                   <li> Dinner {tour.silver && tour.silver.dinner && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.dinner && <i className="fas fa-times"></i>}</li>
-                  <li> Transport {tour.silver && tour.silver.transport && <i className="fas fa-check"></i>}{tour.silver && !tour.silver.transport && <i className="fas fa-times"></i>}</li>
+                  <li> Transport : <b>{tour.silver && tour.silver.transport}</b></li>
+                  <li> Room Type : <b>{tour.silver && tour.silver.roomType}</b></li>
                 </ul>
+
+                <DatePicker
+                  selected={startDate}
+                  minDate={new Date()}
+                  onChange={date => setStartDate(date)}
+                  className='form-control my-3'
+                />
+
                 <button
                   type="button"
                   className="btn btn-lg btn-block btn-p"
+                  onClick={() => bookRoom(tour.silver.cost,'silver')}
+                  disabled={loading||!user ? true: false}
                 >
-                  Book now
+                  {!user ? 'Login to Book' : 'Book now'}
                 </button>
               </div>
             </div>
@@ -164,10 +123,19 @@ const Product = ({ match }) => {
                   <li> Breakfast {tour.gold && tour.gold.breakfast && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.breakfast && <i className="fas fa-times"></i>}</li>
                   <li> Lunch {tour.gold && tour.gold.lunch && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.lunch && <i className="fas fa-times"></i>}</li>
                   <li> Dinner {tour.gold && tour.gold.dinner && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.dinner && <i className="fas fa-times"></i>}</li>
-                  <li> Transport {tour.gold && tour.gold.transport && <i className="fas fa-check"></i>}{tour.gold && !tour.gold.transport && <i className="fas fa-times"></i>}</li>
+                  <li> Transport : <b>{tour.gold && tour.gold.transport}</b></li>
+                  <li> Room Type : <b>{tour.gold && tour.gold.roomType}</b></li>
                 </ul>
-                <button type="button" className="btn btn-lg btn-block btn-p">
-                  Book now
+
+                <DatePicker
+                  selected={startDate}
+                  minDate={new Date()}
+                  onChange={date => setStartDate(date)}
+                  className='form-control my-3'
+                />
+
+                <button type="button" className="btn btn-lg btn-block btn-p" disabled={loading ||!user ? true: false} onClick={() => bookRoom(tour.gold.cost,'gold')}>
+                {!user ? 'Login to Book' : 'Book now'}
                 </button>
               </div>
             </div>
@@ -184,10 +152,20 @@ const Product = ({ match }) => {
                 <li> Breakfast {tour.platinum && tour.platinum.breakfast && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.breakfast && <i className="fas fa-times"></i>}</li>
                   <li> Lunch {tour.platinum && tour.platinum.lunch && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.lunch && <i className="fas fa-times"></i>}</li>
                   <li> Dinner {tour.platinum && tour.platinum.dinner && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.dinner && <i className="fas fa-times"></i>}</li>
-                  <li> Transport {tour.platinum && tour.platinum.transport && <i className="fas fa-check"></i>}{tour.platinum && !tour.platinum.transport && <i className="fas fa-times"></i>}</li>
+                  <li> Transport : <b>{tour.platinum && tour.platinum.transport}</b></li>
+                  <li> Room Type : <b>{tour.platinum && tour.platinum.roomType}</b></li>
                 </ul>
-                <button type="button" className="btn btn-lg btn-block btn-p">
-                  Book now
+
+                <DatePicker
+                  selected={startDate}
+                  minDate={new Date()}
+                  onChange={date => setStartDate(date)}
+                  className='form-control my-3'
+                />
+
+
+                <button type="button" className="btn btn-lg btn-block btn-p" disabled={loading||!user ? true: false} onClick={() => bookRoom(tour.platinum.cost,'platinum')}>
+                {!user ? 'Login to Book' : 'Book now'}
                 </button>
               </div>
             </div>

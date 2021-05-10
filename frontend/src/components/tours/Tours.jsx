@@ -17,7 +17,7 @@ const Tour = ({ tour, col }) => {
                 <Link to={`/tour/${tour._id}`} >{tour.name}</Link>
                 </h5>
                 <h6 class="card-subtitle mb-2 text-muted">
-                   {tour.description.substr(0,100)}....
+                   {tour.description.substr(0,100)}...
                   </h6>
                 <Link to={`/tour/${tour._id}`} id="view_btn" className="btn btn-block">View Details</Link>
               </div>

@@ -17,7 +17,8 @@ const errorMiddleware = require('./middleware/errors');
 dotenv.config({path: 'config/config.env'});
 
 // Set up body parser
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 
 app.use(express.json());
@@ -39,12 +40,14 @@ cloudinary.config({
 //import all routes
 const auth = require('./routes/auth');
 const tour = require('./routes/tour');
+const booking = require('./routes/booking');
 
 
 
 //mount routes
 app.use('/api/v1', auth);
 app.use('/api/v1', tour);
+app.use('/api/v1', booking);
 
 
 

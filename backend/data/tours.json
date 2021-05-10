@@ -11,24 +11,24 @@
        "breakfast":false,
         "lunch": false,
         "dinner":true,
-        "roomType":"economy class",
-        "transport":false,
+        "roomType":"2 Star",
+        "transport":"Economy",
         "cost":6000
     },
     "gold":{
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport":"Economy",
         "cost":8000
     },
     "platinum":{
        "breakfast":true,
         "lunch": true,
         "dinner":true,
-        "roomType":"first class",
-        "transport": true,
+        "roomType":"4 Star",
+        "transport":"Luxury",
         "cost":10000
     }
 
@@ -45,24 +45,24 @@
        "breakfast":false,
         "lunch": false,
         "dinner":true,
-        "roomType":"economy class",
-        "transport":false,
+        "roomType":"2 Star",
+        "transport":"Economy",
         "cost":5000
     },
     "gold":{
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport": "Luxury",
         "cost":7000
     },
     "platinum":{
        "breakfast":true,
         "lunch": true,
         "dinner":true,
-        "roomType":"first class",
-        "transport": true,
+        "roomType":"5 Star",
+        "transport": "Luxury",
         "cost":9000
     }
 
@@ -79,24 +79,24 @@
        "breakfast":false,
         "lunch": false,
         "dinner":true,
-        "roomType":"economy class",
-        "transport":false,
+        "roomType":"3 Star",
+        "transport":"Economy",
         "cost":4000
     },
     "gold":{
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport": "Luxury",
         "cost":5000
     },
     "platinum":{
        "breakfast":true,
         "lunch": true,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport": "Luxury",
         "cost":6000
     }
 
@@ -113,24 +113,24 @@
        "breakfast":false,
         "lunch": false,
         "dinner":true,
-        "roomType":"economy class",
-        "transport":false,
+        "roomType":"2 Star",
+        "transport":"Economy",
         "cost":4000
     },
     "gold":{
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport":"Luxury",
         "cost":5000
     },
     "platinum":{
        "breakfast":true,
         "lunch": true,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"4 Star",
+        "transport":"Luxury",
         "cost":6000
     }
 
@@ -147,24 +147,24 @@
        "breakfast":false,
         "lunch": false,
         "dinner":true,
-        "roomType":"economy class",
-        "transport":false,
+        "roomType":"2 Star",
+        "transport":"Economy",
         "cost":4000
     },
     "gold":{
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport": "Luxury",
         "cost":5000
     },
     "platinum":{
        "breakfast":true,
         "lunch": true,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"5 Star",
+        "transport": "Luxury",
         "cost":6000
     }
 
@@ -190,24 +190,24 @@
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"economy class",
-        "transport":false,
+        "roomType":"2 Star",
+        "transport":"Economy",
         "cost":10000
     },
     "gold":{
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport": "Luxury",
         "cost":12000
     },
     "platinum":{
        "breakfast":true,
         "lunch": true,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"4 Star",
+        "transport": "Luxury",
         "cost":15000
     }
 
@@ -223,24 +223,24 @@
        "breakfast":false,
         "lunch": false,
         "dinner":true,
-        "roomType":"economy class",
-        "transport":false,
+        "roomType":"2 Star",
+        "transport":"Economy",
         "cost":4000
     },
     "gold":{
        "breakfast":true,
         "lunch": false,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"3 Star",
+        "transport": "Luxury",
         "cost":5000
     },
     "platinum":{
        "breakfast":true,
         "lunch": true,
         "dinner":true,
-        "roomType":"business class",
-        "transport": true,
+        "roomType":"5 Star",
+        "transport": "Luxury",
         "cost":6000
     }
 

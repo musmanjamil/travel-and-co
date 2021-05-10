@@ -22,15 +22,22 @@ const Dashboard = ({ match }) => {
     resPerPage,
     filteredToursCount,
   } = useSelector((state) => state.tours);
+
+
   useEffect(() => {
     if (error) {
       return alert.error(error);
     }
     dispatch(getTours(keyword, currentPage));
+
+
   }, [dispatch, alert, error, currentPage, keyword]);
+
   function setCurrentPageNo(pageNumber) {
     setCurrentPage(pageNumber);
   }
+
+
   let count = toursCount;
   if (keyword) {
     count = filteredToursCount;
@@ -42,18 +49,23 @@ const Dashboard = ({ match }) => {
       ) : (
         <Fragment>
           <MetaData title={"Best places to vist"} />
-          <section id="properties" class="container mt-5">
+          <section id="properties" className="container mt-5">
 
-      <h2 class='mb-3 ml-2 stays-heading'>Recomended Places</h2>
+      <h2 className='mb-3 ml-2 stays-heading'>{keyword? `Places in ${keyword}` : 'Recomended Places'}</h2>
 
-      <Link to='/searchbybudget' class='ml-2 back-to-search'> <i class='fa fa-arrow-right'></i>Search By your budget</Link>
+      <Link to='/searchbybudget' className='ml-2 back-to-search'> <i class='fa fa-search'></i> Search By your budget</Link>
 
                 {
                   <Fragment>
                       <div className="row">
-                        {tours.map((tour) => (
-                          <Tour key={tour._id} tour={tour} col={6} />
-                        ))}
+                        {tours.length === 0 ? <div className='alert alert-danger mt-5 w-100'><b>No Tours found with this keyword.</b></div> 
+                          :
+                            tours.map((tour) => (
+                              <Tour key={tour._id} tour={tour} col={6} />
+                            ))
+                          
+                          }
+                        
                       </div>
                   </Fragment>
                 }

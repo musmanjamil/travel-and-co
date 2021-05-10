@@ -22,6 +22,7 @@ export const getTours = (keyword = '', currentPage = 1) => async (dispatch) => {
 }
 export const newTour = (tourData) => async (dispatch) => {
     try {
+        console.log(tourData)
 
         dispatch({ type: 'NEW_TOUR_REQUEST' })
 
