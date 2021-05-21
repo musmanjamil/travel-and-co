@@ -459,11 +459,11 @@ body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden; }
 #_10 {
 	top: 0px;
 	left: 0px;
-	width: 101px;
-	height: 176px;
+	/* width: 101px;
+	height: 176px; */
 	overflow: hidden;
 	font-family: Mongolian Baiti;
-	font-size: 100px;
+	font-size: 60px;
 	text-align: left;
 	color:#fbfffd;
 }

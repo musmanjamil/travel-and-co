@@ -16,9 +16,12 @@ import Footer from "./components/layout/Footer";
 import SearchByBudget from "./components/layout/SearchByBudget";
 import SearchedByBudget from "./components/tours/SearchedByBudget";
 import tourDetails from "./components/tours/TourDetails"
+import MyBookings from './components/bookings/MyBookings'
+
 
 //import admin routes from 
 import NewTour from './components/admin/NewTour'
+import BookingList from './components/admin/BookingList'
 import ProtectedRoute from "./components/route/ProtectedRoutes";
 
 import {loadUser} from "./actions/userActions"
@@ -51,6 +54,8 @@ function App() {
           />
           <Route path="/password/forgot" component={ForgotPassword} exact />
           <Route path="/password/reset/:token" component={NewPassword} exact />
+          <ProtectedRoute path="/admin/bookings" isAdmin={true} component={BookingList} exact />
+          <ProtectedRoute path="/bookings/me"  component={MyBookings} exact />
           <ProtectedRoute path="/admin/tour" isAdmin={true} component={NewTour} exact />
 
           <Footer />

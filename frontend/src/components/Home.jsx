@@ -18,8 +18,9 @@ const Home = () => {
           <div id="travelling___co">travelling &amp; co</div>
 
           <div id="group_1">
-            <div id="_10">10</div>
-            <div id="__01">/01</div>
+            
+            <div id="_10">{new Date().toJSON().slice(0,10).replace(/-/g,'/')}</div>
+            {/* <div id="__01">/01</div> */}
           </div>
 
           <div id="group_2">

@@ -55,12 +55,12 @@ const Header = () => {
                 aria-labelledby="dropdownMenuButton"
               >
                 {user && user.role !== "admin" ? (
-                  <Link className="dropdown-item" to="/orders/me">
-                    Orders
+                  <Link className="dropdown-item" to="/bookings/me">
+                    My Bookings
                   </Link>
                 ) : (
-                  <Link className="dropdown-item" to="/dashboard">
-                    Dashboard
+                  <Link className="dropdown-item" to="/admin/bookings">
+                    All Bookings
                   </Link>
                 )}
                 <Link className="dropdown-item" to="/me">
